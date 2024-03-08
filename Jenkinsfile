@@ -4,14 +4,14 @@ pipeline {
     stages {
         stage('Clone repository') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/SunilParameswaran/PES1UG21CS644_Jenkins.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/parimh15/PES1UG21CS405_Jenkins.git']]])
             }
         }
         
         stage('Build') {
             steps {
                 sh 'g++ main.cpp -o output'
-                build 'PES1UG21CS644-1'
+                build 'PES1UG21CS405-1'
             }
         }
         
